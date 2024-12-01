@@ -41,6 +41,10 @@ import eight9 from "../assets/images/Portfolio/8to9.jpg";
 import worct from "../assets/images/Portfolio/worct.jpg";
 import sweetChill from "../assets/images/Portfolio/sweetChill.jpg";
 import mustard from "../assets/images/Portfolio/Mustard.jpg";
+import Gingergarlic from "../assets/images/Portfolio/gingergarlic.jpg";
+import Syntheticvinegar from "../assets/images/Portfolio/synthetic_vinegar.jpg";
+import RoseWater from "../assets/images/Portfolio/Rosewater.jpg";
+import KewdaWater from "../assets/images/Portfolio/Kewrawater.jpg";
 
 export const Services = [
   {
@@ -150,6 +154,13 @@ export const Portfolios = [
     packaging: ["300G x 24 GB"],
   },
   {
+    id: 28,
+    title: "Garlic Ginger Paste Mixed",
+    packaging: ["300G x 24 GB"],
+    type: "Chutneys and Paste",
+    imageUrl: Gingergarlic,
+  },
+  {
     id: "paste_002",
     title: "Ginger Paste",
     type: "Chutneys and Paste",
@@ -219,6 +230,27 @@ export const Portfolios = [
     type: "Mayonnaise",
     imageUrl: Classic,
     packaging: ["250g x 48pet", "500g x24pet", "1kg.x 20 pouches"],
+  },
+  {
+    id: 42,
+    title: "Synthetic Vinegar",
+    packaging: ["700g x 24 pet"],
+    type: "Vinegars and Flavours",
+    imageUrl: Syntheticvinegar,
+  },
+  {
+    id: 45,
+    title: "Rose Water",
+    packaging: ["700g x 24 pet", "500ml x 48pet"],
+    type: "Vinegars and Flavours",
+    imageUrl: RoseWater,
+  },
+  {
+    id: 46,
+    title: "Kewda Water",
+    packaging: ["700g x 24 pet", "500ml x 48pet"],
+    type: "Vinegars and Flavours",
+    imageUrl: KewdaWater,
   },
 ];
 

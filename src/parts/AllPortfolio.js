@@ -302,6 +302,7 @@ const FoodPortfolio = ({ data }) => {
   const sauces = data.filter((item) => item.type === "Sauces");
   const mayonnaise = data.filter((item) => item.type === "Mayonnaise");
   const chutneys = data.filter((item) => item.type === "Chutneys and Paste");
+  const vinegars = data.filter((item) => item.type === "Vinegars and Flavours");
 
   return (
     <div className="container mx-auto p-4">
@@ -464,6 +465,45 @@ const FoodPortfolio = ({ data }) => {
         <TabPanel>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {chutneys.map((item) => (
+              <div
+                key={item.id}
+                className="group relative rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
+              >
+                <div className="relative w-full h-64 bg-white">
+                  {" "}
+                  {/* Fixed height and white background */}
+                  <img
+                    src={item.imageUrl}
+                    alt={item.title}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="p-4 bg-white">
+                  <h3 className="text-lg font-semibold text-center text-gray-800">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-gray-500 text-center mt-1">
+                    {item.type}
+                  </p>
+                </div>
+                {/* Packaging Overlay */}
+                <div className="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+                  <ul className="text-white text-center space-y-2">
+                    {item.packaging.map((pack, index) => (
+                      <li key={index} className="text-xl">
+                        {pack}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </TabPanel>
+
+        <TabPanel>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {vinegars.map((item) => (
               <div
                 key={item.id}
                 className="group relative rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
