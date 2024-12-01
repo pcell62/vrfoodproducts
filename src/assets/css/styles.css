@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+section {
+  @apply mb-28;
+}
+/* ./assets/css/styles.css */
+
+body {
+  --s: 45px; /* control the size*/
+  --c1: white;
+  --c2: #ede8d0;
+
+  --_g: var(--c1) 0% 5%, var(--c2) 6% 15%, var(--c1) 16% 25%, var(--c2) 26% 35%,
+    var(--c1) 36% 45%, var(--c2) 46% 55%, var(--c1) 56% 65%, var(--c2) 66% 75%,
+    var(--c1) 76% 85%, var(--c2) 86% 95%, #0000 96%;
+  background: radial-gradient(50% 50% at 100% 0, var(--_g)),
+    radial-gradient(50% 50% at 0 100%, var(--_g)),
+    radial-gradient(50% 50%, var(--_g)),
+    radial-gradient(50% 50%, var(--_g)) calc(var(--s) / 2) calc(var(--s) / 2)
+      var(--c1);
+  background-size: var(--s) var(--s);
+}
+
+.active-link {
+  @apply text-theme-purple;
+}
+
+.header {
+  @apply flex flex-col py-4 mb-4 justify-between;
+}
+
+.hero {
+  @apply container px-5 flex flex-col mx-auto;
+}
+
+.portofolio-card:hover .img-hover {
+  @apply opacity-25;
+}
+
+@media (min-width: 1024px) {
+  .header {
+    @apply container w-full flex-row py-8 px-10 mt-2 mb-4 mx-auto items-center content-center border-b border-gray-100;
+  }
+
+  .hero {
+    @apply container flex-row mx-auto mt-8;
+  }
+}
+
+/* Custom styles for Swiper navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: rgba(160, 157, 157, 0.311);
+  /* Semi-transparent background */
+  border-radius: 50%;
+  font-size: 30px;
+
+  /* Circular shape */
+  width: 33px;
+  /* Size of the buttons */
+  height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  /* Color of the arrow icon */
+}
+
+/* Custom styles for the arrow icons */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 30px;
+  /* Size of the arrow */
+  color: #000;
+  /* Color of the arrow */
+  content: "";
+  /* Override default content */
+  border: solid #000;
+  /* Arrow color */
+  border-width: 0 3px 3px 0;
+  /* Arrow thickness */
+  display: inline-block;
+  padding: 5px;
+}
+
+/* Rotate arrows to point in the correct direction */
+.swiper-button-next::after {
+  transform: rotate(-45deg);
+  /* Right arrow */
+}
+
+.swiper-button-prev::after {
+  transform: rotate(135deg);
+  /* Left arrow */
+}
+
+/* Hover effect for buttons */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Darker background on hover */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: bold !important;
+}
