@@ -43,22 +43,13 @@ export default function Footer() {
               Instagram
             </Button>
             <Button
-              href="./"
+              href="https://www.linkedin.com/in/vr-food-products-995704339?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               type="link"
               target="_blank"
               className="flex text-lg text-gray-400 font-light hover:underline"
               isExternal
             >
               LinkedIn
-            </Button>
-            <Button
-              href="./"
-              type="link"
-              target="_blank"
-              className="flex text-lg text-gray-400 font-light hover:underline"
-              isExternal
-            >
-              Github
             </Button>
           </div>
         </div>
