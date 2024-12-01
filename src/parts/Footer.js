@@ -12,15 +12,16 @@ export default function Footer() {
     <div className="bg-gray-50 border-t border-gray-200 pb-6">
       <div className="container flex-col mx-auto ">
         <div className="flex flex-col sm:flex-row mt-8 justify-center ">
-          <div className="w-1/3 flex-col ml-16 mr-8">
+          <div className="sm:w-1/3 flex items-center justify-between  sm:flex-col ml-16 mr-8">
             <BrandIcon />
-            <p className="text-lg text-gray-400 font-light mt-7">
+            <p className=" text-lg text-gray-400 flex flex-col font-light mt-7 sm:ml-16">
               <img
                 href="./"
                 src="https://seeklogo.com/images/F/fssai-logo-C7400699BD-seeklogo.com.png"
                 alt="ISO"
-                className="h-20 ml-16"
+                className="h-24 w-30 pb-5"
               />
+              <div>Lic. No.: 11516023000110</div>
             </p>
           </div>
           <div className="w-1/3 mt-0 ml-16 mr-0 sm:ml-0 sm:mr-5">
