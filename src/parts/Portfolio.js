@@ -39,11 +39,11 @@ export default function FeaturedProducts({ data }) {
         {randomItems.map((item, index) => (
           <Fade direction="up" triggerOnce delay={200 * index} key={item.id}>
             <div className="group rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
-              <div className="relative aspect-square">
+              <div className="relative w-full h-64 bg-white">
                 <img
                   src={item.imageUrl}
                   alt={item.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
               <div className="p-4 bg-white">
