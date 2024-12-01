@@ -49,48 +49,6 @@ const CatalogPage = () => {
       <Header />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="flex items-center mb-4">
-          <div
-            ref={prevRef}
-            className="swiper-button-prev w-12 h-12 bg-blue-500/10 rounded-full flex items-center justify-center cursor-pointer hover:bg-blue-500/20 transition-colors mr-4"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 text-blue-500"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </div>
-
-          <div
-            ref={nextRef}
-            className="swiper-button-next w-12 h-12 bg-blue-500/10 rounded-full flex items-center justify-center cursor-pointer hover:bg-blue-500/20 transition-colors ml-4"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 text-blue-500"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </div>
-        </div>
-
         <Swiper
           modules={[Navigation, Pagination, A11y]}
           spaceBetween={30}
