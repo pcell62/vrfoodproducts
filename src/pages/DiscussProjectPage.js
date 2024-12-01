@@ -79,7 +79,7 @@ export const DiscussProjectPage = () => {
                 <strong>Place of Supply:</strong> Maharashtra
               </p>
               <p className="text-sm text-gray-600">
-                <strong>Contact:</strong> +91-9892161748, 8097978769
+                <strong>Contact:</strong> +91-85917 63320, 76662 24054
               </p>
             </div>
           </div>
