@@ -62,9 +62,9 @@ export const DiscussProjectPage = () => {
                 Contact Information
               </h2>
               <p className="text-sm text-gray-600 mb-2">
-                <strong>Address:</strong> Shop No. 10/11, Plt No.71, Survey No.
-                306, Navghar Road, Raipada, Near Water Tank, Saphale(E), Dist.
-                Palghar - 401102
+                <strong>Address:</strong> Factory: 624, Navghar Road, Near Water
+                Tank, At. Post Saphale (E) Tal./Dist. Palghar-401 102.
+                Maharashtra (India)
               </p>
               <p className="text-sm text-gray-600 mb-2">
                 <strong>GSTIN/UIN:</strong> 27AYVPR4504K1ZQ
