@@ -1,75 +1,145 @@
-// pages/catalog/index.js
+import React, { useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, A11y } from "swiper/modules";
 import Header from "parts/Header";
-import React from "react";
 import Footer from "parts/Footer";
-import first from "../assets/images/Catalog/1.png";
-import second from "../assets/images/Catalog/2.png";
-import third from "../assets/images/Catalog/3.png";
-import fourth from "../assets/images/Catalog/4.png";
-import fifth from "../assets/images/Catalog/5.png";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+// Import images
+import first from "../assets/images/Catalog/product_Catalogue_page-0001.jpg";
+import second from "../assets/images/Catalog/product_Catalogue_page-0002.jpg";
+import third from "../assets/images/Catalog/product_Catalogue_page-0003.jpg";
+import fourth from "../assets/images/Catalog/product_Catalogue_page-0004.jpg";
+import fifth from "../assets/images/Catalog/product_Catalogue_page-0005.jpg";
+import sixth from "../assets/images/Catalog/product_Catalogue_page-0006.jpg";
+import seventh from "../assets/images/Catalog/product_Catalogue_page-0007.jpg";
+import eighth from "../assets/images/Catalog/product_Catalogue_page-0008.jpg";
+import ninth from "../assets/images/Catalog/product_Catalogue_page-0009.jpg";
+import tenth from "../assets/images/Catalog/product_Catalogue_page-0010.jpg";
+import eleventh from "../assets/images/Catalog/product_Catalogue_page-0011.jpg";
+import twelfth from "../assets/images/Catalog/product_Catalogue_page-0012.jpg";
+import thirteenth from "../assets/images/Catalog/product_Catalogue_page-0013.jpg";
 
 const CatalogPage = () => {
   const catalogPages = [
-    {
-      id: 1,
-      title: "Our Valuable Customers",
-      image: first,
-      description:
-        "VR Food Products - Our Valuable Customers and Company Profile",
-    },
-    {
-      id: 2,
-      title: "Tomato Sauce",
-      image: second,
-      description:
-        "Premium Quality Tomato Sauce - Available in 1 kg / 500 g / 5 kg",
-    },
-    {
-      id: 3,
-      title: "Chinese Sauces",
-      image: third,
-      description:
-        "Give Your Taste Buds A Chinese Treat - Complete Range of Chinese Sauces",
-    },
-    {
-      id: 4,
-      title: "Instant Pastes",
-      image: fourth,
-      description:
-        "Instant Ready to Cook Pastes - Garlic, Ginger, and Ginger Garlic Paste",
-    },
-    {
-      id: 5,
-      title: "Mayonnaise",
-      image: fifth,
-      description:
-        "Fresh Creamy Superior Taste Mayonnaise - Available in Various Flavors",
-    },
+    { id: 1, title: "One", image: first },
+    { id: 2, title: "Two", image: second },
+    { id: 3, title: "Three", image: third },
+    { id: 4, title: "Four", image: fourth },
+    { id: 5, title: "Five", image: fifth },
+    { id: 6, title: "Six", image: sixth },
+    { id: 7, title: "Seven", image: seventh },
+    { id: 8, title: "Eight", image: eighth },
+    { id: 9, title: "Nine", image: ninth },
+    { id: 10, title: "Ten", image: tenth },
+    { id: 11, title: "Eleven", image: eleventh },
+    { id: 12, title: "Twelve", image: twelfth },
+    { id: 13, title: "Thirteen", image: thirteenth },
   ];
 
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+
   return (
-    <main className="min-h-screen ">
+    <main className="min-h-screen bg-gray-100">
       <Header />
 
-      {/* Catalog Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
-        <div className="space-y-12">
-          {catalogPages.map((page) => (
-            <div
-              key={page.id}
-              className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="flex items-center mb-4">
+          <div
+            ref={prevRef}
+            className="swiper-button-prev w-12 h-12 bg-blue-500/10 rounded-full flex items-center justify-center cursor-pointer hover:bg-blue-500/20 transition-colors mr-4"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 text-blue-500"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
-              <div className="  h-full">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </div>
+
+          <div
+            ref={nextRef}
+            className="swiper-button-next w-12 h-12 bg-blue-500/10 rounded-full flex items-center justify-center cursor-pointer hover:bg-blue-500/20 transition-colors ml-4"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 text-blue-500"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <Swiper
+          modules={[Navigation, Pagination, A11y]}
+          spaceBetween={30}
+          slidesPerView={1}
+          navigation={{
+            prevEl: prevRef.current,
+            nextEl: nextRef.current,
+          }}
+          pagination={{
+            clickable: true,
+            dynamicBullets: true,
+          }}
+          loop
+          centeredSlides
+          breakpoints={{
+            640: {
+              slidesPerView: 1.5,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 2.5,
+              spaceBetween: 40,
+            },
+          }}
+          onBeforeInit={(swiper) => {
+            /* eslint-disable no-param-reassign */
+            swiper.params.navigation.prevEl = prevRef.current;
+            swiper.params.navigation.nextEl = nextRef.current;
+            /* eslint-enable no-param-reassign */
+          }}
+        >
+          {catalogPages.map((page) => (
+            <SwiperSlide key={page.id}>
+              <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <img
                   src={page.image}
-                  alt={page.title}
+                  alt={`Catalog page ${page.title}`}
                   className="w-full h-full object-contain"
                 />
               </div>
-            </div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
+
       <Footer />
     </main>
   );
