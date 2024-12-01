@@ -27,7 +27,6 @@ import ItaMayo from "../assets/images/Portfolio/ItaMayo.jpg";
 import GarMayo from "../assets/images/Portfolio/GarMayo.jpg";
 import TandMayo from "../assets/images/Portfolio/TandMayo.jpg";
 import PeriMayo from "../assets/images/Portfolio/PeriMayo.jpg";
-import Sandwhich from "../assets/images/Portfolio/Sandwich.jpg";
 import Classic from "../assets/images/Portfolio/Classic.jpg";
 import GreChil from "../assets/images/Portfolio/GreenChilli.jpg";
 import MintMayo from "../assets/images/Portfolio/MintMayo.jpg";
@@ -213,13 +212,7 @@ export const Portfolios = [
     imageUrl: JalMayo,
     packaging: ["250g x 48pet", "500g x24pet", "1kg.x 20 pouches/jar"],
   },
-  {
-    id: "mayo_010",
-    title: "Sandwich Spread",
-    type: "Mayonnaise",
-    imageUrl: Sandwhich,
-    packaging: ["250g x 48pet", "500g x24pet", "1kg.x 20 pouches/jar"],
-  },
+
   {
     id: "mayo_011",
     title: "Egg Mayonnaise",
