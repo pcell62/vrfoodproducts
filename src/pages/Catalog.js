@@ -55,7 +55,7 @@ const CatalogPage = () => {
       <div className="container mx-auto px-4 py-8">
         {isLoading && (
           <div className="flex justify-center items-center h-64">
-            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-orange-600"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-orange-600" />
           </div>
         )}
         <Swiper
@@ -73,8 +73,8 @@ const CatalogPage = () => {
           loop
           centeredSlides
           preloadImages={false}
-          lazy={true}
-          watchSlidesProgress={true}
+          lazy
+          watchSlidesProgress
           speed={400}
           breakpoints={{
             640: {
@@ -91,8 +91,10 @@ const CatalogPage = () => {
             },
           }}
           onBeforeInit={(swiper) => {
-            swiper.params.navigation.prevEl = prevRef.current;
-            swiper.params.navigation.nextEl = nextRef.current;
+            const newSwiper = { ...swiper };
+            newSwiper.params.navigation.prevEl = prevRef.current;
+            newSwiper.params.navigation.nextEl = nextRef.current;
+            return newSwiper;
           }}
         >
           {catalogPages.map((page, index) => (
