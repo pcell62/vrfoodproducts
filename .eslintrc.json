@@ -39,6 +39,10 @@
     "react/jsx-props-no-multi-spaces": "off",
     "react/jsx-closing-tag-location": "off",
     "quotes": "off",
-    "react/jsx-one-expression-per-line": "off"
+    "react/jsx-one-expression-per-line": "off",
+    "object-curly-newline": ["error", {
+      "multiline": true,
+      "consistent": true
+    }]
   }
 }
