@@ -1,6 +1,6 @@
 import React, { useRef, useState, useMemo, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, A11y, Lazy } from "swiper/modules";
+import { Navigation, Pagination, A11y } from "swiper/modules";
 import Header from "parts/Header";
 import Footer from "parts/Footer";
 
@@ -8,7 +8,6 @@ import Footer from "parts/Footer";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/lazy";
 
 // Import images
 import first from "../assets/images/Catalog/product_Catalogue_page-0001.jpg";
@@ -67,7 +66,7 @@ const CatalogPage = () => {
           </div>
         )}
         <Swiper
-          modules={[Navigation, Pagination, A11y, Lazy]}
+          modules={[Navigation, Pagination, A11y]}
           spaceBetween={30}
           slidesPerView={1}
           navigation={{
@@ -81,11 +80,6 @@ const CatalogPage = () => {
           loop
           centeredSlides
           preloadImages={false}
-          lazy={{
-            loadPrevNext: true,
-            loadPrevNextAmount: 2,
-            loadOnTransitionStart: true,
-          }}
           watchSlidesProgress
           speed={400}
           breakpoints={{
