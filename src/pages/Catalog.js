@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useMemo } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y } from "swiper/modules";
 import Header from "parts/Header";
@@ -25,7 +25,11 @@ import twelfth from "../assets/images/Catalog/product_Catalogue_page-0012.jpg";
 import thirteenth from "../assets/images/Catalog/product_Catalogue_page-0013.jpg";
 
 const CatalogPage = () => {
-  const catalogPages = [
+  const [isLoading, setIsLoading] = useState(true);
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+
+  const catalogPages = useMemo(() => [
     { id: 1, title: "One", image: first },
     { id: 2, title: "Two", image: second },
     { id: 3, title: "Three", image: third },
@@ -39,16 +43,21 @@ const CatalogPage = () => {
     { id: 11, title: "Eleven", image: eleventh },
     { id: 12, title: "Twelve", image: twelfth },
     { id: 13, title: "Thirteen", image: thirteenth },
-  ];
+  ], []);
 
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+  const handleImageLoad = () => {
+    setIsLoading(false);
+  };
 
   return (
     <main className="min-h-screen bg-gray-100">
       <Header />
-
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="container mx-auto px-4 py-8">
+        {isLoading && (
+          <div className="flex justify-center items-center h-64">
+            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-orange-600"></div>
+          </div>
+        )}
         <Swiper
           modules={[Navigation, Pagination, A11y]}
           spaceBetween={30}
@@ -63,6 +72,10 @@ const CatalogPage = () => {
           }}
           loop
           centeredSlides
+          preloadImages={false}
+          lazy={true}
+          watchSlidesProgress={true}
+          speed={400}
           breakpoints={{
             640: {
               slidesPerView: 1.5,
@@ -78,30 +91,31 @@ const CatalogPage = () => {
             },
           }}
           onBeforeInit={(swiper) => {
-            /* eslint-disable no-param-reassign */
             swiper.params.navigation.prevEl = prevRef.current;
             swiper.params.navigation.nextEl = nextRef.current;
-            /* eslint-enable no-param-reassign */
           }}
         >
-          {catalogPages.map((page) => (
+          {catalogPages.map((page, index) => (
             <SwiperSlide key={page.id}>
               <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <img
                   src={page.image}
                   alt={`Catalog page ${page.title}`}
-                  loading="lazy"
+                  loading={index === 0 ? "eager" : "lazy"}
+                  width="800"
+                  height="1000"
                   className="w-full h-full object-contain"
+                  decoding={index === 0 ? "sync" : "async"}
+                  onLoad={index === 0 ? handleImageLoad : undefined}
                 />
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
-
       <Footer />
     </main>
   );
 };
 
-export default CatalogPage;
+export default React.memo(CatalogPage);
