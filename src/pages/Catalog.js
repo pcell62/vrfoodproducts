@@ -29,6 +29,10 @@ const CatalogPage = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
+  const handleImageLoad = () => {
+    setIsLoading(false);
+  };
+
   // Preload first image
   useEffect(() => {
     const preloadImage = new Image();
@@ -49,12 +53,8 @@ const CatalogPage = () => {
     { id: 10, title: "Ten", image: tenth, width: 800, height: 1000 },
     { id: 11, title: "Eleven", image: eleventh, width: 800, height: 1000 },
     { id: 12, title: "Twelve", image: twelfth, width: 800, height: 1000 },
-    { id: 13, title: "Thirteen", image: thirteenth, width: 800, height: 1000 }
+    { id: 13, title: "Thirteen", image: thirteenth, width: 800, height: 1000 },
   ], []);
-
-  const handleImageLoad = () => {
-    setIsLoading(false);
-  };
 
   return (
     <main className="min-h-screen bg-gray-100">
