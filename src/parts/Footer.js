@@ -19,6 +19,7 @@ export default function Footer() {
                 href="./"
                 src="https://seeklogo.com/images/F/fssai-logo-C7400699BD-seeklogo.com.png"
                 alt="ISO"
+                loading="lazy"
                 className="h-24 w-30 pb-5"
               />
               <div>Lic. No.: 11516023000110</div>

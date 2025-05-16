@@ -55,6 +55,7 @@ const AboutPage = () => {
                   <img
                     src={photo1}
                     alt="Co-Founder 1"
+                    loading="lazy"
                     className="w-100 h-100 object-cover rounded-full mx-auto shadow-xl"
                   />
                   <p className="text-gray-800 mt-4 text-3xl">Swati Raut</p>
@@ -66,6 +67,7 @@ const AboutPage = () => {
                   <img
                     src={photo2}
                     alt="Co-Founder 2"
+                    loading="lazy"
                     className="w-100 h-100 object-cover rounded-full mx-auto shadow-xl"
                   />
                   <p className="text-gray-800 mt-4 text-3xl">Niket Raut</p>

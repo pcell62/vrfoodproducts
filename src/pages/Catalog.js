@@ -90,6 +90,7 @@ const CatalogPage = () => {
                 <img
                   src={page.image}
                   alt={`Catalog page ${page.title}`}
+                  loading="lazy"
                   className="w-full h-full object-contain"
                 />
               </div>

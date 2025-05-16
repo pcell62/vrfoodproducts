@@ -35,11 +35,13 @@ const Service = ({ data }) => {
                     <img
                       src={item.imageUrl}
                       alt="Service"
+                      loading="lazy"
                       className="w-full transition-opacity duration-500 ease-in-out group-hover:opacity-0"
                     />
                     <img
                       src={item.imageUrl2}
                       alt="Hover Service"
+                      loading="lazy"
                       className="w-full absolute inset-0 opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100"
                     />
                   </div>

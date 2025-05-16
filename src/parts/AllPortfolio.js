@@ -399,6 +399,7 @@ const FoodPortfolio = ({ data }) => {
                   <img
                     src={item.imageUrl}
                     alt={item.title}
+                    loading="lazy"
                     className="w-full h-full object-contain"
                   />
                 </div>
@@ -436,6 +437,7 @@ const FoodPortfolio = ({ data }) => {
                   <img
                     src={item.imageUrl}
                     alt={item.title}
+                    loading="lazy"
                     className="w-full h-full object-contain"
                   />
                 </div>
@@ -475,6 +477,7 @@ const FoodPortfolio = ({ data }) => {
                   <img
                     src={item.imageUrl}
                     alt={item.title}
+                    loading="lazy"
                     className="w-full h-full object-contain"
                   />
                 </div>
@@ -514,6 +517,7 @@ const FoodPortfolio = ({ data }) => {
                   <img
                     src={item.imageUrl}
                     alt={item.title}
+                    loading="lazy"
                     className="w-full h-full object-contain"
                   />
                 </div>

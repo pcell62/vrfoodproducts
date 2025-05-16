@@ -26,7 +26,7 @@ export default function HeroPortfolio() {
       </div>
       <div className="w-full sm:w-1/2 sm:pr-12">
         <Fade direction="up" triggerOnce>
-          <img src={heroPortfolio} alt="Hero" />
+          <img src={heroPortfolio} alt="Hero" loading="lazy" />
         </Fade>
       </div>
     </section>

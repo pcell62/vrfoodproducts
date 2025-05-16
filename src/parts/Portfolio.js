@@ -43,6 +43,7 @@ export default function FeaturedProducts({ data }) {
                 <img
                   src={item.imageUrl}
                   alt={item.title}
+                  loading="lazy"
                   className="w-full h-full object-contain"
                 />
               </div>

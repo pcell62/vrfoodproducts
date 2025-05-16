@@ -28,7 +28,7 @@ export default function Advantage({ data }) {
               <Fade bottom triggerOnce delay={200 * index} key={index}>
                 <div>
                   <div className="bg-white p-3 my-6 mx-3 sm:my-7 sm:mx-3 xl:my-14 xl:mx-7 rounded-2xl shadow-xl border border-light-theme-purple transform transition duration-500 hover:scale-105">
-                    <img src={item.imageUrl} alt="" className="w-80" />
+                    <img src={item.imageUrl} alt="" loading="lazy" className="w-80" />
                   </div>
                 </div>
               </Fade>
@@ -40,7 +40,7 @@ export default function Advantage({ data }) {
               <Fade bottom triggerOnce delay={500 * index} key={index}>
                 <div>
                   <div className="bg-white flex flex-row items-center p-3 my-6 mx-3 sm:my-7 sm:mx-3 xl:my-14 xl:mx-7 rounded-2xl shadow-xl border border-light-theme-purple transform transition duration-500 hover:scale-105">
-                    <img src={item.imageUrl} alt="" className="w-80" />
+                    <img src={item.imageUrl} alt="" loading="lazy" className="w-80" />
                   </div>
                 </div>
               </Fade>
@@ -51,7 +51,7 @@ export default function Advantage({ data }) {
               <Fade bottom triggerOnce delay={500 * index} key={index}>
                 <div>
                   <div className="bg-white p-3 my-6 mx-3 sm:my-7 sm:mx-3 xl:my-14 xl:mx-7 rounded-2xl shadow-xl border border-light-theme-purple transform transition duration-500 hover:scale-105">
-                    <img src={item.imageUrl} alt="" className="w-80" />
+                    <img src={item.imageUrl} alt="" loading="lazy" className="w-80" />
                   </div>
                 </div>
               </Fade>

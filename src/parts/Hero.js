@@ -47,7 +47,7 @@ export default function Hero() {
       </div>
       <div className="flex pt-5 md:w-fit w-full justify-center items-center order-first md:order-first lg:order-last lg:w-1/2">
         <Fade direction="up" triggerOnce>
-          <img className="rounded-xl" src={BuildWebsite} alt="Build Website" />
+          <img className="rounded-xl" src={BuildWebsite} alt="Build Website" loading="lazy" />
         </Fade>
       </div>
     </section>
